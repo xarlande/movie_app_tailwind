@@ -7,30 +7,32 @@
     >
   </div>
   <div class="justify-center items-center flex gap-6">
-    <Switch
-      v-model="DarkTheme"
-      :class="DarkTheme ? 'bg-purple-600' : 'bg-gray-400'"
-      class="relative inline-flex h-6 w-11 items-center rounded-full"
-    >
-      <span
-        :class="DarkTheme ? 'translate-x-6' : 'translate-x-1'"
-        class="inline-block h-4 w-4 transform rounded-full bg-white transition"
-      />
-    </Switch>
+    <!--    <Switch-->
+    <!--      v-model="DarkTheme"-->
+    <!--      :class="DarkTheme ? 'bg-purple-600' : 'bg-gray-400'"-->
+    <!--      class="relative inline-flex h-6 w-11 items-center rounded-full"-->
+    <!--    >-->
+    <!--      <span-->
+    <!--        :class="DarkTheme ? 'translate-x-6' : 'translate-x-1'"-->
+    <!--        class="inline-block h-4 w-4 transform rounded-full bg-white transition"-->
+    <!--      />-->
+    <!--    </Switch>-->
     <div class="burger md:hidden" @click="burgerMenu">
       <burger-icon v-if="!OpenBurger" />
       <burger-close-icon v-else />
       <nav :class="{ open_burger: OpenBurger, hidden: !OpenBurger }">
         <ul class="mobile_nav_list text-gray-500 font-semibold">
-          <li><router-link class="nav_menu" to="/">Home</router-link></li>
-          <li><router-link class="nav_menu" to="/about">About</router-link></li>
+          <li><router-link class="nav_menu" to="/">Favorite</router-link></li>
+          <li>
+            <router-link class="nav_menu" to="/about">Search</router-link>
+          </li>
         </ul>
       </nav>
     </div>
     <nav class="max-md:hidden">
       <ul class="text-gray-500 h-full font-semibold flex">
-        <li><router-link class="nav_menu" to="/">Home</router-link></li>
-        <li><router-link class="nav_menu" to="/about">About</router-link></li>
+        <li><router-link class="nav_menu" to="/">Favorite</router-link></li>
+        <li><router-link class="nav_menu" to="/about">Search</router-link></li>
       </ul>
     </nav>
   </div>
@@ -39,13 +41,11 @@
 <script>
 import BurgerIcon from "@/components/icons/BurgerIcon.vue";
 import BurgerCloseIcon from "@/components/icons/BurgerCloseIcon.vue";
-import { Switch } from "@headlessui/vue";
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: "NavigationPages",
-  // eslint-disable-next-line vue/no-reserved-component-names
-  components: { Switch, BurgerCloseIcon, BurgerIcon },
+  components: { BurgerCloseIcon, BurgerIcon },
   data: () => ({
     OpenBurger: false,
     DarkTheme: false,

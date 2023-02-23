@@ -4,14 +4,15 @@ import NavigationPages from "@/components/NavigationPages.vue";
 </script>
 
 <template>
-  <div class="bg-gray-50">
+  <div>
     <header class="px-10 border-b">
       <div class="max-w-4xl mx-auto flex justify-between">
         <NavigationPages />
       </div>
     </header>
-
-    <RouterView />
+    <main class="max-w-4xl mx-auto px-3 my-5 text-gray-500 font-semibold">
+      <RouterView />
+    </main>
   </div>
 </template>
 
