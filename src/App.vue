@@ -1,8 +1,3 @@
-<script setup>
-import { RouterView } from "vue-router";
-import NavigationPages from "@/components/NavigationPages.vue";
-</script>
-
 <template>
   <div>
     <header class="px-10 border-b">
@@ -15,5 +10,14 @@ import NavigationPages from "@/components/NavigationPages.vue";
     </main>
   </div>
 </template>
+
+<script>
+import { defineComponent } from "vue";
+import NavigationPages from "@/components/NavigationPages.vue";
+
+export default defineComponent({
+  components: { NavigationPages },
+});
+</script>
 
 <style scoped></style>
