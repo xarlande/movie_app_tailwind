@@ -2,7 +2,7 @@
   <div class="film_card" v-for="(item, idx) in movie_data" :key="idx">
     <div class="flex items-center justify-center basis-auto">
       <img
-        class="rounded-full w-32 h-32"
+        class="rounded w-32 h-32"
         :src="
           item.poster_path
             ? `https://image.tmdb.org/t/p/w500${item.poster_path}`
