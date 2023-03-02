@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-between">
     <input
-      class="text-center px-10 rounded"
+      class="text-center px-10 rounded border"
       type="text"
       placeholder="Enter a movie"
       v-model="searchInput"
