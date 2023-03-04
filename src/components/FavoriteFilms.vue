@@ -1,6 +1,8 @@
 <template>
   <div class="film_list">
-    <h2 class="text-center">Watched film (Length: {{ watchedMovies.length }})</h2>
+    <h2 class="text-center">
+      Watched film (Length: {{ watchedMovies.length }})
+    </h2>
     <div class="film_cards">
       <FilmCard v-if="watchedMovies.length > 0" :item-card="watchedMovies" />
       <div v-else class="mt-2 text-sm text-center">It`s list empty</div>
