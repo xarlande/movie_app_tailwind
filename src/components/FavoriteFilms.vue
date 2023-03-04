@@ -1,16 +1,16 @@
 <template>
   <div class="film_list">
-    <div class="inline-block mx-auto">
-      Watched film {{ watchedMovies.length }}
-    </div>
+    <h2 class="text-center">Watched film (Length: {{ watchedMovies.length }})</h2>
     <div class="film_cards">
-      <FilmCard :item-card="watchedMovies" />
+      <FilmCard v-if="watchedMovies.length > 0" :item-card="watchedMovies" />
+      <div v-else class="mt-2 text-sm text-center">It`s list empty</div>
     </div>
   </div>
-  <div class="film_list">
-    All film ({{ favoriteMovie.length }})
+  <div class="mt-10">
+    <h2 class="text-center">All film (Length: {{ favoriteMovie.length }})</h2>
     <div class="film_cards">
-      <FilmCard :item-card="favoriteMovie" />
+      <FilmCard v-if="favoriteMovie.length > 0" :item-card="favoriteMovie" />
+      <div v-else class="mt-2 text-sm text-center">It`s list empty</div>
     </div>
   </div>
 </template>
