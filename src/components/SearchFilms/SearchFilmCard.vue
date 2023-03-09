@@ -20,7 +20,11 @@
         <div class="date_card">{{ item.release_date }}</div>
 
         <div class="btn_card">
-          <button class="btn watch_btn" @click="addToUserMovies(item)">
+          <button
+            class="btn"
+            :class="[getMovieAdded(item) ? 'watch_btn' : 'watch_btn_active']"
+            @click="addToUserMovies(item)"
+          >
             {{ getMovieAdded(item) ? "Add" : "Added" }}
           </button>
         </div>
@@ -60,5 +64,9 @@ export default {
 }
 .card_footer {
   @apply flex justify-between items-center;
+}
+
+.watch_btn_active {
+  @apply text-white bg-purple-400;
 }
 </style>
