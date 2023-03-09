@@ -66,6 +66,6 @@ export default {
   @apply flex justify-between items-center;
 }
 .watch_btn_active {
-  @apply text-white bg-purple-400;
+  @apply text-white bg-purple-400 cursor-not-allowed;
 }
 </style>
