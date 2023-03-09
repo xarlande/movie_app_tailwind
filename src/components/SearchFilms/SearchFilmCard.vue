@@ -65,7 +65,6 @@ export default {
 .card_footer {
   @apply flex justify-between items-center;
 }
-
 .watch_btn_active {
   @apply text-white bg-purple-400;
 }
