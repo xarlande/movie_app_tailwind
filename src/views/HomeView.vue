@@ -10,3 +10,5 @@ export default defineComponent({
   components: { FavoriteFilms },
 });
 </script>
+
+<style scoped></style>

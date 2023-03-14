@@ -30,7 +30,6 @@ export const useFilmsMarket = defineStore("searchFilms", {
       }
     },
     addToUserMovies(obj) {
-      console.log();
       const movieStore = useFavoriteFilms();
       const movieFavoriteStore = movieStore.favoriteMovie;
       if (this.getMovieAdded(obj)) {
