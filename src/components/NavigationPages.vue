@@ -7,16 +7,6 @@
     >
   </div>
   <div class="justify-center items-center flex gap-6">
-    <!--    <Switch-->
-    <!--      v-model="DarkTheme"-->
-    <!--      :class="DarkTheme ? 'bg-purple-600' : 'bg-gray-400'"-->
-    <!--      class="relative inline-flex h-6 w-11 items-center rounded-full"-->
-    <!--    >-->
-    <!--      <span-->
-    <!--        :class="DarkTheme ? 'translate-x-6' : 'translate-x-1'"-->
-    <!--        class="inline-block h-4 w-4 transform rounded-full bg-white transition"-->
-    <!--      />-->
-    <!--    </Switch>-->
     <div class="burger md:hidden" @click="burgerMenu">
       <burger-icon v-if="!OpenBurger" />
       <burger-close-icon v-else />
