@@ -23,7 +23,7 @@ export const useFilmsMarket = defineStore("searchFilms", {
   actions: {
     async getFilm(s) {
       if (s) {
-        const api_url = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${s}\n`;
+        const api_url = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${s}`;
         const res = await fetch(`${api_url}`);
         const data = await res.json();
         this.movie_data = data.results;
