@@ -17,7 +17,13 @@
       <div class="card_footer mt-5">
         <div class="date_card">{{ item.release_date }}</div>
 
-        <div class="btn_card">
+        <div class="btn_card flex">
+          <a
+            class="btn watch_btn"
+            target="_blank"
+            :href="`https://hdrezka.ag/search/?do=search&subaction=search&q=${item.title}`"
+            >Link</a
+          >
           <button class="btn watch_btn" @click="toggleWatchFilm(item.id)">
             {{ !item.watch ? "Watch" : "Watched" }}
           </button>
